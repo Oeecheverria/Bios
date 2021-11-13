@@ -1,0 +1,33 @@
+body {
+	background-color: red;
+	color: white;
+}
+
+div {
+	background-color: white;
+	color: red;
+}
+
+h1, h2 {
+	text-align: center;
+}
+
+h2 span {
+	color: black;
+}
+
+p {
+	font-weight: bold;
+}
+
+.parrafoGeneral {
+	font-style: italic;
+}
+
+.parrafoEspecial {
+	color: blue;
+}
+
+#ultimoParrafo {
+	text-decoration: line-through;
+}

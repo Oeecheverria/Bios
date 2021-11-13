@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Formularios</title>
+
+
+		<style>
+
+			from div{ 
+					margin-top: 1.5em;
+
+				}
+
+			label{
+
+				front-weight: bold;
+			}
+
+
+			label:first-child{
+						display: block;
+						margin-bottom: .25em;
+
+			}
+	
+
+		</style>
+	</head>
+
+	<body>
+		<h1> Formularios</h1>
+
+		<form action = "http://localhost:8084/EjemploListarParametros/ListarParametros" method = "post">
+		<div>
+
+			<label for="campoTexto">Campo de texto:</label>
+			<input  type="text"	 name ="campoTexto" id = "campoTexto" placeholder = "ingrese algo aqui..." value= "texto por defecto"/>
+		
+
+</div>	
+
+		<div>
+
+			<label for="campoContrasenia">Campo de Contraseña:</label>
+			<input  type="password"	 name ="campoContrasenia" id = "campoContrasenia" placeholder = "Contraseña..." value= "123"/>
+		
+
+</div>	
+	<div>
+			<label for="careaTexto">Area de Texto:</label>
+			<textarea name ="areaTexto" id = "areaTexto" placeholder=" pone algo aca..."> Textopordefecto</textarea>
+	</div>
+
+		<div>
+			<input type= "checkbox" name ="casillaVerificacion1" id="casillaVerificacion1" value="true" checked="checked" />
+
+			<label for="casillaVerificacion1">Casilla de verificacion 1 </lablel> |
+	<input type= "checkbox" name ="casillaVerificacion2" id="casillaVerificacion2" value="true" />
+
+			<label for="casillaVerificacion2">Casilla de verificacion 2 </lablel>
+
+
+
+		</div>
+
+
+		<div>
+			<input type= "radio" name ="botonOpcion1" id="botonOpcion1" value="BotonOpcion1" checked="checked" />
+
+			<label for="botonOpcion1">Boton de opcion 1 </lablel> |
+	<input type= "radio" name ="botonOpcion2" id="botonOpcion2" value="BotonOpcion2" />
+
+			<label for="botonOpcion2">boton de Opcion2 </lablel>
+
+
+
+		</div>
+
+
+		<div>
+			<lable for = "listaDesplegable">Lista Desplegable: </label>
+			<select name= "listaDesplegable" id="listaDesplegable" >
+				<option value = "Opcion1">Opcion 1</option>
+				<option value = "Opcion2">Opcion 2</option>
+				<option value = "Opcion3">Opcion 3</option>
+	
+			</select>
+
+				
+		</div>
+
+
+		<div>
+			<lable for = "lista">Lista :</label>
+			<select name= "lista" id="lista" size ="3" multiple= "multiple">
+				<option value = "Opcion1">Opcion 1</option>
+				<option value = "Opcion2">Opcion 2</option>
+				<option value = "Opcion3" selected = "selected">Opcion 3</option>
+				<option value = "Opcion4">Opcion 4</option>
+		
+			</select>
+
+				
+		</div>
+
+		<div>
+			<input type ="hidden" name = "campoOculto" value = "valorOculto" />
+
+
+			<input type ="reset" name= "botonLimpiar" value="Limpiar"/>
+			<input type ="submit" name= "botonEnviar" value="Enviar"/>
+
+</div>
+		</form>
+	</body>
+
+</html>

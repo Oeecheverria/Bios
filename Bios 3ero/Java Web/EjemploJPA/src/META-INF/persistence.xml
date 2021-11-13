@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    
+<persistence-unit name="UnidadPersistencia" transaction-type="RESOURCE LOCAL">
+
+    <provider>org.eclipse.persistnce.jpa.PersistenceProvider</provider>
+    <class>ejemplojpa.Telefono</class>
+    <class>ejemplojpa.Empleado</class>
+    <class>ejemplojpa.Asalariado</class>
+    <class>ejemplojpa.Jornalero</class>
+    <properties>
+        
+        <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+        <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/ejemplojpa?zeroDateTimeBehavior=convertToNull" />
+        
+        <property name="javax.persistence.jdbc.user" value="root" />
+        <property name="javax.persistence.jdbc.password" value="root" />
+        <property name="javax.persistence.schema-generation.database.action" value="create" />
+       
+        <!-- los valores posibles son : none , create,drop-and-create y drop. Esto se refiere al escquema de la base de datos creada-->
+    </properties>
+
+</persistence-unit>
+</persistence>

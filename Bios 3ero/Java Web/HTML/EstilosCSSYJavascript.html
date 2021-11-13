@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Estilos CSS</title>
+		<link rel="stylesheet" href="Estilos.css" />
+
+		<style>
+			body {
+				background-color: green;
+			}
+		</style>
+	</head>
+
+	<body style="background-color: yellow">
+		<div>
+			<h1 id="tituloPrincipal">Estilos CSS</h1>
+
+			<h2>Un <span>Subtítulo</span></h2>
+		</div>
+
+		<p>Un <span>párrafo</span>.</p>
+		<p class="parrafoGeneral">Otro párrafo.</p>
+		<p id="ultimoParrafo" class="parrafoGeneral parrafoEspecial">Otro párrafo más.</p>
+
+		<p><button id="botonSaludar">Saludar</button>
+		<button id="botonCambiarTitulo">Cambiar Título</button></p>
+
+		<script src="Javascript.js"></script>
+
+		<script>
+			document.getElementById('botonSaludar').onclick = function() {
+				saludar();
+			};
+
+			document.getElementById('botonCambiarTitulo').onclick = function() {
+				document.body.style.background = 'red';
+				document.getElementById('tituloPrincipal').innerHTML = 'Estilos CSS y Javascript';
+			};
+		</script>
+	</body>
+</html>
