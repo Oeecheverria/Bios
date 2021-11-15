@@ -4,9 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 import androidx.core.content.ContextCompat;
 
+import android.app.Notification;
+import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
@@ -36,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         PendingIntent intencionContenido = PendingIntent.getActivity(getApplicationContext(), CODIGO_SOLICITUD_INTENCION_CONTENIDO_NOTIFICACION, intencionOtraActivity, PendingIntent.FLAG_UPDATE_CURRENT);
 
-        NotificationCompat.Builder constructorNotificacion = new NotificationCompat.Builder(getApplicationContext());
+        NotificationCompat.Builder constructorNotificacion = new NotificationCompat.Builder(getApplicationContext(),"");
 
         constructorNotificacion
                 .setSmallIcon(android.R.drawable.ic_dialog_alert)
@@ -47,7 +51,32 @@ public class MainActivity extends AppCompatActivity {
                 .setContentInfo("x " + ++notifiacionesCreadas)
                 .setContentIntent(intencionContenido)
                 .setLights(Color.RED, 500, 2000)
-                .setSound(Uri.parse("android.resourse://age com.example.notificaciones/" + R.ra))
+                .setSound(Uri.parse("android.resource://com.example.notificaciones/" + R.raw.gallo))
+                .setVibrate(new long[]{0, 200, 300, 300})
+                .setColor(Color.RED)
+                .setPriority(Notification.PRIORITY_HIGH);
+               // .setAutoCancel(true);
+
+        Bitmap imagenGallo = BitmapFactory.decodeResource(this.getResources(), R.drawable.gallos);
+        NotificationCompat.BigPictureStyle estiloImagenGrande = new NotificationCompat.BigPictureStyle();
+        estiloImagenGrande.bigPicture(imagenGallo);
+        estiloImagenGrande.setSummaryText("Has recibido una notificacion");
+
+        constructorNotificacion.setStyle(estiloImagenGrande);
+
+        Intent intencionIrABios = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.google.com"));
+        PendingIntent intencionAcercaDe = PendingIntent.getActivity(getApplicationContext(),
+                CODIGO_SOLICITUD_INTENCION_CONTENIDO_ACCION, intencionIrABios, 0);
+
+        NotificationCompat.Action.Builder constructorAcercaDe = new NotificationCompat.Action.Builder(android.R.drawable.ic_menu_info_details, "Acerca de... ", intencionAcercaDe);
+
+        constructorNotificacion.addAction(constructorAcercaDe.build());
+
+
+
+        NotificationManager gestorNotificaciones = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        gestorNotificaciones.notify(ID_NOTIFICACION,constructorNotificacion.build());
+
     }
 
 }
