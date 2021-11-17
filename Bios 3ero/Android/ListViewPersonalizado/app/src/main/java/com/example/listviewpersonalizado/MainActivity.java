@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
            private void lvEmpleadosOnItemClick(AdapterView<?> parent, View view, int position, long id) {
                Toast.makeText(this,"emplado seleccionado :  " +
-                       ((Empleado)parent.getItemAtPosition(position)).getNombreCompleto(),Toast.LENGTH_SHORT.show();
+                       ((Empleado)parent.getItemAtPosition(position)).getNombreCompleto(),Toast.LENGTH_SHORT.show());
 
            }
        }));
