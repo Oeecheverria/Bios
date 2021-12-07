@@ -1,3 +1,7 @@
 <resources>
+<<<<<<< HEAD
     <string name="app_name">EmpleadosCapas</string>
+=======
+    <string name="app_name">Empleados Capas</string>
+>>>>>>> 0483cad94f9bc1ff5b4a415a88c4c56d4780dbf4
 </resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_weight="40"
+        android:layout_height="0dp"
+        android:id="@+id/frgListadoEmpleados"
+        android:name="com.example.fragmentsmaestrodetalle.ListadoEmpleadosFragment"
+        tools:layout="@layout/fragment_listado_empleados"/>
+
+    <fragment
+        android:id="@+id/frgDetalleEmpleado"
+        android:name="com.example.fragmentsmaestrodetalle.DetalleEmpleadoFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="60"
+        tools:layout="@layout/fragment_detalle_empleado"/>
+
+</LinearLayout>

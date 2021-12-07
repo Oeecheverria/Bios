@@ -6,6 +6,7 @@
     android:paddingVertical="4dp">
 
     <TextView
+<<<<<<< HEAD
         android:id="@+id/tvCedula"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
@@ -33,5 +34,26 @@
         android:layout_alignBaseline="@id/tvNombre"
         android:textSize="18sp"
         android:textStyle="bold" />
+=======
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvCedula"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvNombre"
+        android:layout_below="@+id/tvCedula"
+        android:textSize="18sp"
+        android:textStyle="italic"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvSueldo"
+        android:layout_alignParentRight="true"
+        android:layout_alignBaseline="@+id/tvNombre"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+>>>>>>> 0483cad94f9bc1ff5b4a415a88c4c56d4780dbf4
 
 </RelativeLayout>

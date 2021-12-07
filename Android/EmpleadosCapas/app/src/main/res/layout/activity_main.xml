@@ -4,22 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     android:padding="16dp"
     tools:context=".presentacion.MainActivity">
+=======
+    android:padding="16sp"
+    tools:context=".Presentacion.MainActivity">
+>>>>>>> 0483cad94f9bc1ff5b4a415a88c4c56d4780dbf4
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_centerHorizontal="true"
         android:layout_marginTop="8dp"
         android:text="Menú Principal"
         android:textSize="20sp"
         android:textStyle="bold" />
+=======
+        android:layout_marginTop="8dp"
+        android:text="Menu principal"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+
+>>>>>>> 0483cad94f9bc1ff5b4a415a88c4c56d4780dbf4
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+<<<<<<< HEAD
         android:orientation="vertical">
 
         <Button
@@ -36,4 +51,16 @@
 
     </LinearLayout>
 
+=======
+        android:gravity="center">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnEmpleadosOnClick"
+            android:text="Empleado" />
+    </LinearLayout>
+
+
+>>>>>>> 0483cad94f9bc1ff5b4a415a88c4c56d4780dbf4
 </RelativeLayout>
